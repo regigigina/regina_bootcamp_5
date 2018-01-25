@@ -1,0 +1,64 @@
+<div class="col-md-12 d-flex flex-row" style="padding:0px;">
+  <div class="col-sm-3">
+      <div class="d-flex flex-column">
+          <h1>Simple.</h1>
+          <a class="shadow-both" routerLink="/">Home</a>
+          <a class="shadow-bottom" (click)="Cat('accessories')">Accessories</a>
+          <a class="shadow-bottom" (click)="Cat('denim')">Denim</a>
+          <a class="shadow-bottom" (click)="Cat('shoes')">Footwear</a>
+          <a class="shadow-bottom" (click)="Cat('jeans')">Jeans</a>
+          <a class="shadow-bottom" (click)="Cat('outerwear')">Outerwear</a>
+          <a class="shadow-bottom" (click)="Cat('pants')">Pants</a>
+          <a class="shadow-bottom" (click)="Cat('shirt')">Shirts</a>
+          <a class="shadow-bottom" (click)="Cat('t-shirt')">T-shirts</a>
+          <a class="shadow-bottom" (click)="Cat('shorts')">Shorts</a>
+      </div>
+  </div>
+  <div class="col-sm-9">      
+    <div class="row shadow-top" style="margin-top: 95px;">
+      <!-- <form *ngFor="let e of item, let i = index"> -->
+        <div class="col-md-6">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">{{item.category}}</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{item.name}}</li>
+            </ol>
+          </nav>
+          <img class="detail-img" src="{{item.image}}">
+        </div>
+        <div class="col-md-6 col" style="margin-top: 50px;">
+          <h4>{{item.name}}</h4>
+          <h5>{{item.price}}</h5>
+          <div class="row" style="padding: 15px;">
+            <div class="form-group">
+              <label>Colour</label>
+              <select class="form-control">
+                <option>Jet Black</option>
+                <option>Baby Blue</option>
+                <option>Lime Green</option>
+                <option>Broken White</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Size</label>
+              <select class="form-control">
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </div>
+          </div>
+          <button>ADD TO CART</button>
+          <div class="row" style="padding: 15px;">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i><p href="#" class="fsmall">Share</p>
+            <i class="fa fa-twitter" aria-hidden="true"></i><p href="#" class="fsmall">Tweet</p>
+            <i class="fa fa-pinterest-p" aria-hidden="true"></i><p href="#" class="fsmall">Pin</p>
+          </div>
+        </div>
+      <!-- </form> -->
+    </div>
+  </div>
+</div>

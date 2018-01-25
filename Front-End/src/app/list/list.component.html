@@ -1,0 +1,33 @@
+<div class="col-md-12 d-flex flex-row" style="padding:0px;">
+    <div class="col-sm-3">
+        <div class="d-flex flex-column">
+            <h1>Simple.</h1>
+            <a class="shadow-both" (click)="Load()">Home</a>
+            <a class="shadow-bottom" (click)="Cat('accessories')">Accessories</a>
+            <a class="shadow-bottom" (click)="Cat('denim')">Denim</a>
+            <a class="shadow-bottom" (click)="Cat('shoes')">Footwear</a>
+            <a class="shadow-bottom" (click)="Cat('jeans')">Jeans</a>
+            <a class="shadow-bottom" (click)="Cat('outerwear')">Outerwear</a>
+            <a class="shadow-bottom" (click)="Cat('pants')">Pants</a>
+            <a class="shadow-bottom" (click)="Cat('shirt')">Shirts</a>
+            <a class="shadow-bottom" (click)="Cat('t-shirt')">T-shirts</a>
+            <a class="shadow-bottom" (click)="Cat('shorts')">Shorts</a>
+        </div>
+    </div>
+    <div class="col-sm-9">      
+        <div class="row" style="margin-top: 85px;">
+            <div *ngFor="let e of collection, let i = index">
+                <div class="col-md-4 d-flex flex-row justify-content-center">
+                    <div class="card" (click)="oneItem()" >
+                        <h6 id="itemID" style="display:none;">{{e.id}}</h6>
+                        <img class="card-img-top" src="{{e.image}}">
+                        <div class="card-body d-flex flex-column">
+                            <label class="align-items-center">{{e.name}}</label>
+                            <p>{{e.price}}</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>       
+        </div>  
+    </div>
+</div>

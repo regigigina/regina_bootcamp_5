@@ -1,0 +1,74 @@
+<div class="col-md-12 d-flex flex-row" style="padding:0px;">
+  <div class="col-sm-3">
+    <div class="d-flex flex-column">
+        <h1>Simple.</h1>
+        <a class="shadow-both" routerLink="/">Home</a>
+        <a class="shadow-bottom" (click)="Cat('accessories')">Accessories</a>
+        <a class="shadow-bottom" (click)="Cat('denim')">Denim</a>
+        <a class="shadow-bottom" (click)="Cat('shoes')">Footwear</a>
+        <a class="shadow-bottom" (click)="Cat('jeans')">Jeans</a>
+        <a class="shadow-bottom" (click)="Cat('outerwear')">Outerwear</a>
+        <a class="shadow-bottom" (click)="Cat('pants')">Pants</a>
+        <a class="shadow-bottom" (click)="Cat('shirt')">Shirts</a>
+        <a class="shadow-bottom" (click)="Cat('t-shirt')">T-shirts</a>
+        <a class="shadow-bottom" (click)="Cat('shorts')">Shorts</a>
+    </div>
+  </div>
+  <div class="col-sm-9">    
+    <div class="col shadow-top" style="margin-top: 95px;">
+      <!-- <form *ngFor="let e of item, let i = index"> -->
+        <div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Your Shopping Cart</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div>
+          <table class="col-md-12" style="margin-top: 15px;">
+            <tr>
+              <th style="width: 25%; text-align: start;" scope="col">Product</th>
+              <th style="width: 30%" scope="col"></th>
+              <th style="width: 15%; text-align: end;" scope="col">Price</th>
+              <th style="width: 15%; text-align: center;" scope="col">Quantity</th>
+              <th style="width: 15%; text-align: end;" scope="col">Total</th>
+            </tr>
+            <tr>
+              <td class="d-flex justify-content-start">
+                <img class="cart-img" src="http://localhost:3000/image/1516851026037.png" alt="">
+              </td>
+              <td class="col">
+                <p>Basic Collection Mitten</p>
+                <p style="font-size:small;">Yellow/All Size</p>
+                <button class="btnnone">Remove</button>
+              </td>
+              <td style="text-align: end;">7.99</td>
+              <td style="text-align: center;">
+                <input class="quantity" type="number">
+              </td>
+              <td style="text-align: end;">7.99</td>
+            </tr>
+          </table>
+        </div>
+        <div class="row" style="margin-top: 25px;">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Special instruction for seller</label>
+              <textarea class="form-control" rows="4"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex flex-column align-items-end">
+            <h6>Subtotal $7.99</h6>
+            <p style="font-style:italic; font-size:small;">Shipping and taxes calculated at checkout</p>
+            <div class="row">
+              <button class="btnwhite"><i class="fa fa-undo" aria-hidden="true"></i></button>
+              <button class="btnwhite">CONTINUE SHOPPING</button>
+            </div>
+            <button class="btnblack">CHECK OUT</button>
+          </div>
+        </div>
+      <!-- </form> -->
+    </div>
+  </div>
+</div>
